@@ -14,6 +14,24 @@
         <div class="text-body-2 font-weight-light mb-n1">Welcome to</div>
 
         <h1 class="text-h2 font-weight-bold">Vuetify</h1>
+        <h3>{{ $t('helloworld.maintext') }}</h3>
+        <!-- Language Switcher -->
+        <v-btn
+          class="mt-4"
+          color="primary"
+          @click="toggleLanguage"
+        >
+          {{  currentLanguage === 'en' ? 'Switch to French' : 'Switch to English' }}
+        </v-btn>
+
+        <v-switch
+          class="mt-4"
+          v-model="isEnglish"
+          :label="isEnglish ? 'English' : 'French'"
+          @change="toggleLanguage"
+        >
+
+        </v-switch>
       </div>
 
       <div class="py-4" />
@@ -153,5 +171,21 @@
 </template>
 
 <script setup lang="ts">
-  //
+import { ref, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n()
+
+const isEnglish = ref(locale.value === 'en')
+
+// Watch for changes in `isEnglish` and update the locale accordingly
+watch(isEnglish, (newValue) => {
+  locale.value = newValue ? 'en' : 'fr'
+})
+
+const currentLanguage = locale.value
+const toggleLanguage = () => {
+  isEnglish.value = !isEnglish.value
+
+}
+
 </script>
