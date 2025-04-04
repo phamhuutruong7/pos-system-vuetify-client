@@ -1,0 +1,1 @@
+import{_ as n,V as a,a as r}from"./BaseLayout.vue_vue_type_script_setup_true_lang-BvsZaOCb.js";import{d as _,r as s,c,o as p,a as e,w as m,F as l}from"./index-BiYoEZtJ.js";import"./scopeId-B21SGZ7_.js";const x=_({__name:"default",setup(u){return(i,f)=>{const o=s("router-view"),t=r;return p(),c(l,null,[e(n),e(a,null,{default:m(()=>[e(o)]),_:1}),e(t)],64)}}});export{x as default};
