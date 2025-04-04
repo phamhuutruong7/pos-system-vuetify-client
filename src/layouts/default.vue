@@ -1,4 +1,5 @@
 <template>
+  <BaseLayout />
   <v-main>
     <router-view />
   </v-main>
@@ -7,5 +8,7 @@
 </template>
 
 <script lang="ts" setup>
+import BaseLayout from './BaseLayout.vue';
+
   //
 </script>
