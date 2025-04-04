@@ -1,7 +1,5 @@
 <template>
-
-  <!-- App Bar -->
-  <v-app-bar app color="primary" dark>
+  <v-app-bar class="position-fixed" color="primary" dark >
     <v-app-bar-nav-icon @click="drawer = !drawer" />
 
     <v-toolbar-title class="ml-2">
@@ -12,7 +10,7 @@
 
     <!-- Nav Links for desktop -->
     <v-btn text v-for="item in navItems" :key="item.title" :to="item.route">
-      <p>Dummy</p>
+      <p>{{ item.title }}</p>
     </v-btn>
 
     <!-- Language Switcher in Nav Bar -->
@@ -26,25 +24,13 @@
         <v-list-item-title><p>Item title</p></v-list-item-title>
       </v-list-item>
     </v-list>
-    <h1>Dummy list</h1>
   </v-navigation-drawer>
-
-  <!-- Main Content -->
-  <v-main>
-    <v-container fluid>
-      <router-view />
-    </v-container>
-  </v-main>
-
-  <!-- Footer -->
-  <AppFooter />
 
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
-import AppFooter from '@/components/AppFooter.vue'
 
 const drawer = ref(false)
 
@@ -54,3 +40,13 @@ const navItems = [
   // add additional nav items as needed
 ]
 </script>
+
+<style>
+.v-app-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+</style>
