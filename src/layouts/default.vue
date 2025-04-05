@@ -10,7 +10,6 @@
       <AppFooter />
     </v-layout>
   </v-app>
-
 </template>
 
 <script lang="ts" setup>

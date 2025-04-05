@@ -31,6 +31,7 @@
     try {
       await router.replace({ params: { locale: newLocale } })
     } catch(e) {
+      console.error(e)
       router.push("/")
     }
   }

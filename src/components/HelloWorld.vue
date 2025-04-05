@@ -24,14 +24,14 @@
           {{  currentLanguage === 'en' ? 'Switch to French' : 'Switch to English' }}
         </v-btn>
 
-        <v-switch
+        <!-- <v-switch
           class="mt-4"
           v-model="isEnglish"
           :label="isEnglish ? 'English' : 'French'"
           @change="toggleLanguage"
         >
 
-        </v-switch>
+        </v-switch> -->
       </div>
 
       <div class="py-4" />

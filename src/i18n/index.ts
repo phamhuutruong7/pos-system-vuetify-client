@@ -2,7 +2,8 @@ import { createI18n } from "vue-i18n"
 
 import en from "./locales/en.json"
 import fr from "./locales/fr.json"
-
+import de from "./locales/de.json"
+import vi from "./locales/vi.json"
 // const messages = {
 //   en: {
 //     nav: {
@@ -41,7 +42,7 @@ const i18n = createI18n({
   fallbackLocale: import.meta.env.VITE_FALLBACK_LOCALE || "en",
   legacy: false,
   globalInjection: true,
-  messages: { en,fr },
+  messages: { en,fr, de, vi },
   runtimeOnly: false,
 })
 
